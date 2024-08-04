@@ -3,7 +3,7 @@ import esES from "antd/locale/es_ES";
 
 const localeData: LocaleData = {
   antLocale: esES,
-  logo: "Pic Smaller",
+  logo: "Small.im",
   initial: "Inicializando",
   previewHelp:
     "Arrastra la línea divisoria para comparar el efecto de compresión: a la izquierda es la imagen original, a la derecha es la imagen comprimida",
@@ -33,7 +33,7 @@ const localeData: LocaleData = {
   },
   optionPannel: {
     failTip: "Imposible de reducir más el tamaño, por favor ajusta los parámetros e inténtalo de nuevo.",
-    help: "Pic Smaller es una aplicación de compresión de imágenes por lotes. Las modificaciones se aplicarán a todas las imágenes.",
+    help: "Small.im es una aplicación de compresión de imágenes por lotes. Las modificaciones se aplicarán a todas las imágenes.",
     resizeLable: "Cambia el tamaño de la imagen",
     jpegLable: "Parámetros JPEG/WEBP",
     pngLable: "Parámetros PNG",

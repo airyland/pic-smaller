@@ -5,7 +5,7 @@ import koKR from "antd/locale/ko_KR";
 
 const localeData: LocaleData = {
   antLocale: koKR,
-  logo: "Pic Smaller",
+  logo: "Small.im",
   initial: "초기화 중",
   previewHelp:
     "압축 효과를 비교하려면 구분선을 드래그하세요. 왼쪽은 원본 이미지, 오른쪽은 압축된 이미지입니다.",
@@ -36,7 +36,7 @@ const localeData: LocaleData = {
   },
   optionPannel: {
     failTip: "더 작게 만들 수 없습니다. 매개변수를 조정하고 다시 시도하세요.",
-    help: "Pic Smaller는 옵션에 대한 수정 사항이 모든 이미지에 적용되는 일괄 이미지 압축 응용 프로그램입니다.",
+    help: "Small.im는 옵션에 대한 수정 사항이 모든 이미지에 적용되는 일괄 이미지 압축 응용 프로그램입니다.",
     resizeLable: "이미지 크기 조정",
     jpegLable: "JPEG/WEBP 매개변수",
     pngLable: "PNG 매개변수",

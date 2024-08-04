@@ -5,7 +5,7 @@ import jaJP from "antd/locale/ja_JP";
 
 const localeData: LocaleData = {
   antLocale: jaJP,
-  logo: "Pic Smaller",
+  logo: "Small.im",
   initial: "初期化中",
   previewHelp:
     "分割線をドラッグして圧縮効果を比較します。左が元の画像、右が圧縮された画像です",
@@ -37,7 +37,7 @@ const localeData: LocaleData = {
   optionPannel: {
     failTip:
       "小さくすることができません。パラメータを調整して再試行してください。",
-    help: "Pic Smaller はバッチ画像圧縮アプリケーションです。オプションの変更はすべての画像に適用されます。",
+    help: "Small.im はバッチ画像圧縮アプリケーションです。オプションの変更はすべての画像に適用されます。",
     resizeLable: "画像のサイズを変更する",
     jpegLable: "JPEG/WEBPパラメータ",
     pngLable: "PNG パラメータ",

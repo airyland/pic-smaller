@@ -34,7 +34,7 @@ const localeData: LocaleData = {
   },
   optionPannel: {
     failTip: "無法更小，請調整參數後重試",
-    help: "Pic Smaller是一款大量圖片壓縮應用，對選項的修改將套用到所有圖片上",
+    help: "Small.im 是一款大量圖片壓縮應用，對選項的修改將套用到所有圖片上",
     resizeLable: "調整圖片尺寸",
     jpegLable: "JPEG/WEBP參數",
     pngLable: "PNG參數",
