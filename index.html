@@ -5,10 +5,105 @@
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Small.im – Compress JPEG, PNG, WEBP, AVIF, SVG and GIF images intelligently</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script defer data-domain="small.im" src="https://click.pageview.click/js/script.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" style="height:100vh;"></div>
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-8 text-black">Small.im Image Compression FAQ</h1>
+
+      <div class="space-y-6">
+      <section>
+          <h2 class="text-2xl font-semibold mb-4 text-black">General Questions</h2>
+          <div class="space-y-4">
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">What is Small.im?</h3>
+                  <p class="mt-2">Small.im is an open-source batch image compression tool that supports multiple image formats.</p>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">What image formats does Small.im support?</h3>
+                  <p class="mt-2">Small.im supports various formats, including JPEG, WEBP, PNG, GIF, and AVIF.</p>
+              </div>
+          </div>
+      </section>
+      
+      <section>
+          <h2 class="text-2xl font-semibold mb-4 text-black">Usage</h2>
+          <div class="space-y-4">
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">How do I upload images to Small.im?</h3>
+                  <p class="mt-2">You can select files by clicking on the upload area or by dragging and dropping files and folders onto it.</p>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">Can I add multiple images at once?</h3>
+                  <p class="mt-2">Yes, you can batch append images or add entire folders at once.</p>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">How can I compare the original and compressed images?</h3>
+                  <p class="mt-2">Use the preview feature, which allows you to drag a dividing line to compare the original image (left side) with the compressed image (right side).</p>
+              </div>
+          </div>
+      </section>
+      
+      <section>
+          <h2 class="text-2xl font-semibold mb-4 text-black">Compression Options</h2>
+          <div class="space-y-4">
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">Can I resize images during compression?</h3>
+                  <p class="mt-2">Yes, you can resize images using various modes:</p>
+                  <ul class="list-disc list-inside mt-2 ml-4">
+                      <li>Set width (height scales automatically)</li>
+                      <li>Set height (width scales automatically)</li>
+                      <li>Set short side (long side scales automatically)</li>
+                      <li>Set long side (short side scales automatically)</li>
+                  </ul>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">What parameters can I adjust for different image formats?</h3>
+                  <p class="mt-2">You can adjust:</p>
+                  <ul class="list-disc list-inside mt-2 ml-4">
+                      <li>JPEG/WEBP: Output image quality (0-1)</li>
+                      <li>PNG: Number of output colors (2-256) and dithering coefficient (0-1)</li>
+                      <li>GIF: Dithering option</li>
+                      <li>AVIF: Output image quality (1-100) and compression speed (1-10)</li>
+                  </ul>
+              </div>
+          </div>
+      </section>
+      
+      <section>
+          <h2 class="text-2xl font-semibold mb-4 text-black">Managing Compressed Images</h2>
+          <div class="space-y-4">
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">How can I download my compressed images?</h3>
+                  <p class="mt-2">You can download individual images or save all compressed images at once.</p>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">Can I remove images from the list?</h3>
+                  <p class="mt-2">Yes, you can remove individual images or clear all images from the list.</p>
+              </div>
+          </div>
+      </section>
+      
+      <section>
+          <h2 class="text-2xl font-semibold mb-4 text-black">Troubleshooting</h2>
+          <div class="space-y-4">
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">What should I do if I encounter a 404 error?</h3>
+                  <p class="mt-2">If you see a 404 error, it means the page you're trying to access doesn't exist. Use the "Back to home" option to return to the main page.</p>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                  <h3 class="font-bold text-lg text-black">How can I reset the compression options to default?</h3>
+                  <p class="mt-2">Use the "Reset options" button to restore all compression settings to their default values.</p>
+              </div>
+          </div>
+      </section>
+  </div>
+  
+  <footer class="mt-8 text-center text-gray-600">
+      <p>Remember, any changes you make to the compression options will be applied to all images in your current batch.</p>
+  </footer>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
