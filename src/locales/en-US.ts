@@ -8,8 +8,8 @@ const localeData: LocaleData = {
   previewHelp:
     "Drag the dividing line to compare the compression effect: the left is the original image, the right is the compressed image",
   uploadCard: {
-    title: "Select files here, support dragging files and folders",
-    subTitle: "Open source batch image compression tool, supports %s format",
+    title: "Click to select or drop files",
+    subTitle: "Batch image compression tool, supports %s format",
   },
   listAction: {
     batchAppend: "Batch append",
