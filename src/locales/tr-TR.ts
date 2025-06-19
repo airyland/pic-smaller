@@ -3,6 +3,11 @@ import trTR from "antd/locale/tr_TR";
 
 const localeData: LocaleData = {
   antLocale: trTR,
+  seo: {
+    title: "Small.im – JPEG, PNG, WEBP, AVIF, SVG ve GIF görüntülerini sıkıştırmak ve dönüştürmek için ücretsiz araç",
+    description: "Small.im, gizlilik endişesi olmadan JPEG, PNG, WEBP, AVIF, SVG ve GIF görüntülerini güvenli bir şekilde sıkıştırmak ve dönüştürmek için ücretsiz bir araçtır",
+    keywords: "görüntü sıkıştırma, jpeg, png, webp, avif, gif, svg, görüntü sıkıştırıcı, görüntü dönüştürücü, ücretsiz araç"
+  },
   logo: "Small.im",
   initial: "Başlatılıyor",
   previewHelp:

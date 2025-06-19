@@ -5,6 +5,11 @@ import zhTW from "antd/locale/zh_TW";
 
 const localeData: LocaleData = {
   antLocale: zhTW,
+  seo: {
+    title: "Small.im – 免費的JPEG、PNG、WEBP、AVIF、SVG、GIF圖片壓縮轉換工具",
+    description: "Small.im是一個免費工具，可以安全地壓縮和轉換JPEG、PNG、WEBP、AVIF、SVG和GIF圖片，零隱私顧慮",
+    keywords: "圖片壓縮, jpeg, png, webp, avif, gif, svg, 壓縮圖片, 圖片轉換器, 免費工具"
+  },
   logo: "圖小小",
   initial: "初始化中",
   previewHelp: "拖曳分割線對比壓縮效果：左邊是原始圖，右邊是壓縮圖",

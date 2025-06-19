@@ -5,6 +5,11 @@ import jaJP from "antd/locale/ja_JP";
 
 const localeData: LocaleData = {
   antLocale: jaJP,
+  seo: {
+    title: "Small.im – 無料のJPEG、PNG、WEBP、AVIF、SVG、GIF画像圧縮・変換ツール",
+    description: "Small.imは、プライバシーを完全に保護しながらJPEG、PNG、WEBP、AVIF、SVG、GIF画像を安全に圧縮・変換する無料ツールです",
+    keywords: "画像圧縮, jpeg, png, webp, avif, gif, svg, 画像圧縮ツール, 画像変換, 無料ツール"
+  },
   logo: "Small.im",
   initial: "初期化中",
   previewHelp:

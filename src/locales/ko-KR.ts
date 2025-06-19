@@ -5,6 +5,11 @@ import koKR from "antd/locale/ko_KR";
 
 const localeData: LocaleData = {
   antLocale: koKR,
+  seo: {
+    title: "Small.im – 무료 JPEG, PNG, WEBP, AVIF, SVG, GIF 이미지 압축 및 변환 도구",
+    description: "Small.im은 프라이버시 걱정 없이 JPEG, PNG, WEBP, AVIF, SVG, GIF 이미지를 안전하게 압축하고 변환하는 무료 도구입니다",
+    keywords: "이미지 압축, jpeg, png, webp, avif, gif, svg, 이미지 압축기, 이미지 변환기, 무료 도구"
+  },
   logo: "Small.im",
   initial: "초기화 중",
   previewHelp:

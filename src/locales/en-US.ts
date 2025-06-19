@@ -3,6 +3,11 @@ import enUS from "antd/locale/en_US";
 
 const localeData: LocaleData = {
   antLocale: enUS,
+  seo: {
+    title: "Small.im – A free tool to compress and convert JPEG, PNG, WEBP, AVIF, SVG and GIF images",
+    description: "Small.im is a free tool to securely compress and convert JPEG, PNG, WEBP, AVIF, SVG and GIF images with zero privacy concerns",
+    keywords: "image compression, jpeg, png, webp, avif, gif, svg, compress images, image converter, free tool"
+  },
   logo: "Small.im",
   initial: "Initializing",
   previewHelp:

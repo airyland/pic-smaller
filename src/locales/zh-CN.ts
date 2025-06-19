@@ -3,7 +3,12 @@ import zhCN from "antd/locale/zh_CN";
 
 const localeData: LocaleData = {
   antLocale: zhCN,
-  logo: "图小小",
+  seo: {
+    title: "Small.im – 免费的在线图片压缩和格式转换工具",
+    description: "Small.im是一款免费的在线图片压缩工具，支持JPEG、PNG、WEBP、AVIF、SVG和GIF格式的压缩和转换，保护您的隐私安全",
+    keywords: "图片压缩, 图像压缩, jpeg压缩, png压缩, webp转换, avif压缩, gif压缩, svg优化, 在线工具, 免费压缩"
+  },
+  logo: "Small.im",
   initial: "初始化中",
   previewHelp: "拖动分割线对比压缩效果：左边是原始图，右边是压缩图",
   uploadCard: {
@@ -32,7 +37,7 @@ const localeData: LocaleData = {
   },
   optionPannel: {
     failTip: "无法更小，请调整参数后重试",
-    help: "图小小是一款批量图片压缩应用程序，对选项的修改将应用到所有图片上",
+    help: "Small.im是一款批量图片压缩应用程序，对选项的修改将应用到所有图片上",
     resizeLable: "调整图片尺寸",
     jpegLable: "JPEG/WEBP参数",
     pngLable: "PNG参数",
@@ -76,21 +81,21 @@ const localeData: LocaleData = {
     rate: "压缩率",
   },
   faq: {
-    title: "图小小图片压缩常见问题",
+    title: "Small.im图片压缩常见问题",
     sections: [
       {
         title: "常规问题",
         items: [
           {
-            question: "什么是图小小？",
-            answer: "图小小是一个开源的批量图片压缩工具，支持多种图片格式。它是 PicSmaller (https://github.com/joye61/pic-smaller) 的分支，可在 https://github.com/airyland/pic-smaller 获取，采用 MIT 许可证分发。"
+            question: "什么是Small.im？",
+            answer: "Small.im是一个开源的批量图片压缩工具，支持多种图片格式。它是 PicSmaller (https://github.com/joye61/pic-smaller) 的分支，可在 https://github.com/airyland/pic-smaller 获取，采用 MIT 许可证分发。"
           },
           {
-            question: "图小小支持哪些图片格式？",
-            answer: "图小小支持多种格式，包括 JPEG、WEBP、PNG、GIF 和 AVIF。"
+            question: "Small.im支持哪些图片格式？",
+            answer: "Small.im支持多种格式，包括 JPEG、WEBP、PNG、GIF 和 AVIF。"
           },
           {
-            question: "使用图小小处理我的图片安全吗？",
+            question: "使用Small.im处理我的图片安全吗？",
             answer: "是的，完全安全。所有图片压缩和转换过程都在您的浏览器本地执行。您的图片不会上传到任何服务器，确保您的数据隐私和安全。"
           }
         ]
@@ -99,7 +104,7 @@ const localeData: LocaleData = {
         title: "使用方法",
         items: [
           {
-            question: "如何向图小小上传图片？",
+            question: "如何向Small.im上传图片？",
             answer: "您可以通过点击上传区域选择文件，或将文件和文件夹拖放到上传区域。"
           },
           {

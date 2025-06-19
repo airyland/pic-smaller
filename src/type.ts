@@ -2,6 +2,11 @@ import { Locale } from "antd/es/locale";
 
 export interface LocaleData {
   antLocale: Locale;
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
   logo: string;
   initial: string;
   previewHelp: string;

@@ -3,6 +3,11 @@ import faIR from "antd/locale/fa_IR";
 
 const localeData: LocaleData = {
   antLocale: faIR,
+  seo: {
+    title: "Small.im – ابزار رایگان فشرده‌سازی و تبدیل تصاویر JPEG، PNG، WEBP، AVIF، SVG و GIF",
+    description: "Small.im ابزاری رایگان برای فشرده‌سازی و تبدیل امن تصاویر JPEG، PNG، WEBP، AVIF، SVG و GIF بدون هیچ نگرانی حریم خصوصی است",
+    keywords: "فشرده‌سازی تصاویر, jpeg, png, webp, avif, gif, svg, فشرده کننده تصاویر, مبدل تصاویر, ابزار رایگان"
+  },
   logo: "پیک کوچولو",
   initial: "در حال راه‌اندازی",
   previewHelp:
