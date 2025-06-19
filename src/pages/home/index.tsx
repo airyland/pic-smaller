@@ -4,7 +4,8 @@ import { observer } from "mobx-react-lite";
 import { Logo } from "@/components/Logo";
 import { GithubOutlined, MenuOutlined } from "@ant-design/icons";
 import { gstate } from "@/global";
-import { changeLang, langList } from "@/locale";
+import { langList } from "@/locale";
+import { switchLanguage } from "@/router";
 import { homeState } from "@/states/home";
 import { wait } from "@/functions";
 import { UploadCard } from "@/components/UploadCard";
@@ -32,7 +33,7 @@ const Header = observer(() => {
             selectedKeys: [gstate.lang],
             async onClick({ key }) {
               await wait(300);
-              changeLang(key);
+              switchLanguage(key);
             },
           }}
         >

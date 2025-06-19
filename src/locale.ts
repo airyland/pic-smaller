@@ -41,6 +41,7 @@ export async function changeLang(lang: string) {
   await setLocaleData(lang);
 }
 
+
 export async function initLang() {
   gstate.lang = getLang();
   await setLocaleData(gstate.lang);
