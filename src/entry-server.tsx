@@ -306,7 +306,7 @@ function SSRApp({ lang }: { lang: string }) {
 }
 
 // SSR render function with proper signature
-export async function render(url: string, lang: string) {
+export async function render(_url: string, lang: string) {
   const html = ReactDOMServer.renderToString(
     <SSRApp lang={lang} />
   )

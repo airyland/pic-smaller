@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:ssr": "node server.js",
-    "build": "tsc && vite build && node build-ssr.js",
+    "build": "tsc && vite build && node build-entry-server.js && node build-ssr.js",
     "build:spa": "tsc && vite build",
     "build:ssr": "npm run build && npm run build:server",
     "build:server": "vite build --ssr server.js --outDir dist-server",

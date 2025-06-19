@@ -1,8 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import React from 'react'
-import ReactDOMServer from 'react-dom/server'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -118,59 +116,56 @@ const languages = {
   }
 }
 
-// Simple server-rendered content component
-function ServerContent({ lang, content }) {
-  return React.createElement('div', { 
-    style: { 
-      minHeight: '60vh', 
-      display: 'flex', 
-      flexDirection: 'column', 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      padding: '40px 20px',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-    } 
-  },
-    React.createElement('h1', { 
-      style: { 
-        fontSize: '2.5rem', 
-        fontWeight: '600', 
-        color: '#1da565', 
-        textAlign: 'center',
-        marginBottom: '16px'
-      } 
-    }, content.heading),
-    React.createElement('p', { 
-      style: { 
-        fontSize: '1.2rem', 
-        color: '#666', 
-        textAlign: 'center',
-        marginBottom: '32px',
-        maxWidth: '600px'
-      } 
-    }, content.subheading),
-    React.createElement('div', { 
-      style: { 
-        border: '2px dashed #ccc', 
-        borderRadius: '8px', 
-        padding: '40px', 
-        textAlign: 'center',
-        backgroundColor: '#fafafa',
-        marginBottom: '24px'
-      } 
-    },
-      React.createElement('p', { style: { fontSize: '1.1rem', marginBottom: '8px' } }, content.uploadText),
-      React.createElement('p', { style: { fontSize: '0.9rem', color: '#888' } }, content.supportedFormats)
-    ),
-    React.createElement('p', { 
-      style: { 
-        fontSize: '0.9rem', 
-        color: '#666', 
-        textAlign: 'center',
-        maxWidth: '500px'
-      } 
-    }, content.privacyNote)
-  )
+// Dynamic import and render function for SSR
+async function renderSSRContent(langCode) {
+  try {
+    // Try to import the compiled entry-server from dist first
+    let render
+    try {
+      const distServerPath = path.resolve(__dirname, 'dist/entry-server.js')
+      if (fs.existsSync(distServerPath)) {
+        const module = await import(distServerPath)
+        render = module.render
+      } else {
+        // Fallback to source file (won't work without compilation)
+        throw new Error('Compiled entry-server.js not found')
+      }
+    } catch (importError) {
+      console.log(`Could not import compiled SSR module for ${langCode}, using fallback`)
+      // Return enhanced fallback content instead
+      const data = languages[langCode]
+      return `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:20px;border-bottom:1px solid #e8e8e8">
+          <h1 style="font-size:1.5rem;font-weight:600;color:#1da565;margin:0">${langCode === 'zh-CN' ? '图小小' : langCode === 'ja-JP' ? 'Small.im' : 'Small.im'}</h1>
+          <div style="font-size:0.9rem;color:#666">${langCode}</div>
+        </div>
+        <div style="min-height:40vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px">
+          <div style="border:2px dashed #ccc;border-radius:8px;padding:60px 40px;text-align:center;background-color:#fafafa;max-width:600px;width:100%">
+            <h2 style="font-size:1.2rem;font-weight:500;margin-bottom:16px;color:#333">${data.content.heading}</h2>
+            <p style="font-size:0.9rem;color:#888;margin:0">${data.content.subheading}</p>
+          </div>
+        </div>
+        <div style="background:#f5f5f5;padding:20px;text-align:center;border-top:1px solid #e8e8e8">
+          <p style="font-size:0.9rem;color:#666;margin:0">© 2025 Small.im - Open Source Image Compression Tool</p>
+        </div>
+      </div>`
+    }
+    
+    // Use the full SSR render function
+    const html = await render('/', langCode)
+    return html
+  } catch (error) {
+    console.error(`Error rendering SSR content for ${langCode}:`, error)
+    
+    // Enhanced fallback content
+    const data = languages[langCode]
+    return `<div style="min-height:60vh;display:flex;align-items:center;justify-content:center;padding:40px;text-align:center">
+      <div>
+        <h1 style="color:#1da565;font-size:2rem;margin-bottom:16px">${data?.content?.heading || 'Small.im'}</h1>
+        <p style="color:#666;font-size:1.1rem">${data?.content?.subheading || 'Image Compression Tool'}</p>
+      </div>
+    </div>`
+  }
 }
 
 async function buildSSRFiles() {
@@ -184,15 +179,13 @@ async function buildSSRFiles() {
 
   for (const [langCode, data] of Object.entries(languages)) {
     try {
-      // Render server content
-      const serverHtml = ReactDOMServer.renderToString(
-        React.createElement(ServerContent, { lang: langCode, content: data.content })
-      )
+      // Render full SSR content including FAQ
+      const serverHtml = await renderSSRContent(langCode)
 
       // Create localized HTML with server-rendered content
       let localizedHTML = template
         .replace(
-          '<html lang="zh-CN">',
+          /<html lang="[^"]*">/,
           `<html lang="${langCode}">`
         )
         .replace(
