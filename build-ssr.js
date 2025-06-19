@@ -202,7 +202,27 @@ async function buildSSRFiles() {
         )
         .replace(
           '<div id="root"></div>',
-          `<div id="root">${serverHtml}</div><noscript>Please enable JavaScript to use this application.</noscript>`
+          `<div id="root"></div>
+          <noscript>Please enable JavaScript to use this application.</noscript>`
+        )
+        .replace(
+          '</body>',
+          `  <!-- SSR FAQ content for SEO, will be hidden once React loads -->
+          <div id="ssr-faq-content" style="margin-top: 40px;">
+            ${serverHtml}
+          </div>
+          <script>
+            // Hide SSR content once React has loaded
+            window.addEventListener('load', function() {
+              setTimeout(function() {
+                var ssrContent = document.getElementById('ssr-faq-content');
+                if (ssrContent && document.querySelector('#root > *')) {
+                  ssrContent.style.display = 'none';
+                }
+              }, 100);
+            });
+          </script>
+          </body>`
         )
 
       // Write files
