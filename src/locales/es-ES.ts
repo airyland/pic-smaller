@@ -82,6 +82,84 @@ const localeData: LocaleData = {
     after: "Después de comprimir",
     rate: "Índice de compresión",
   },
+  faq: {
+    title: "FAQ de compresión de imágenes Small.im",
+    sections: [
+      {
+        title: "Preguntas generales",
+        items: [
+          {
+            question: "¿Qué es Small.im?",
+            answer: "Small.im es una herramienta de compresión de imágenes por lotes de código abierto que admite múltiples formatos de imagen. Es un fork de PicSmaller (https://github.com/joye61/pic-smaller), disponible en https://github.com/airyland/pic-smaller, y se distribuye bajo la licencia MIT."
+          },
+          {
+            question: "¿Qué formatos de imagen admite Small.im?",
+            answer: "Small.im admite varios formatos, incluyendo JPEG, WEBP, PNG, GIF y AVIF."
+          },
+          {
+            question: "¿Es seguro usar Small.im con mis imágenes?",
+            answer: "Sí, es completamente seguro. Todos los procesos de compresión y conversión de imágenes se realizan localmente en tu navegador. Tus imágenes nunca se cargan en ningún servidor, garantizando la privacidad y seguridad de tus datos."
+          }
+        ]
+      },
+      {
+        title: "Uso",
+        items: [
+          {
+            question: "¿Cómo subo imágenes a Small.im?",
+            answer: "Puedes seleccionar archivos haciendo clic en el área de carga o arrastrando y soltando archivos y carpetas en ella."
+          },
+          {
+            question: "¿Puedo añadir múltiples imágenes a la vez?",
+            answer: "Sí, puedes añadir imágenes por lotes o agregar carpetas enteras de una vez."
+          },
+          {
+            question: "¿Cómo puedo comparar las imágenes originales y comprimidas?",
+            answer: "Usa la función de vista previa, que te permite arrastrar una línea divisoria para comparar la imagen original (lado izquierdo) con la imagen comprimida (lado derecho)."
+          }
+        ]
+      },
+      {
+        title: "Opciones de compresión",
+        items: [
+          {
+            question: "¿Puedo redimensionar imágenes durante la compresión?",
+            answer: "Sí, puedes redimensionar imágenes usando varios modos: Establecer ancho (la altura se escala automáticamente), Establecer altura (el ancho se escala automáticamente), Establecer lado corto (el lado largo se escala automáticamente), Establecer lado largo (el lado corto se escala automáticamente)."
+          },
+          {
+            question: "¿Qué parámetros puedo ajustar para diferentes formatos de imagen?",
+            answer: "Puedes ajustar: JPEG/WEBP: Calidad de imagen de salida (0-1), PNG: Número de colores de salida (2-256) y coeficiente de difuminado (0-1), GIF: Opción de difuminado, AVIF: Calidad de imagen de salida (1-100) y velocidad de compresión (1-10)."
+          }
+        ]
+      },
+      {
+        title: "Gestión de imágenes comprimidas",
+        items: [
+          {
+            question: "¿Cómo puedo descargar mis imágenes comprimidas?",
+            answer: "Puedes descargar imágenes individuales o guardar todas las imágenes comprimidas de una vez."
+          },
+          {
+            question: "¿Puedo eliminar imágenes de la lista?",
+            answer: "Sí, puedes eliminar imágenes individuales o limpiar todas las imágenes de la lista."
+          }
+        ]
+      },
+      {
+        title: "Solución de problemas",
+        items: [
+          {
+            question: "¿Qué debo hacer si encuentro un error 404?",
+            answer: "Si ves un error 404, significa que la página a la que intentas acceder no existe. Usa la opción \"Volver al inicio\" para regresar a la página principal."
+          },
+          {
+            question: "¿Cómo puedo restablecer las opciones de compresión a los valores predeterminados?",
+            answer: "Usa el botón \"Reiniciar ajustes\" para restaurar todas las configuraciones de compresión a sus valores predeterminados."
+          }
+        ]
+      }
+    ]
+  },
 };
 
 export default localeData;

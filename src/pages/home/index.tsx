@@ -14,6 +14,8 @@ import { Compare } from "@/components/Compare";
 import { useResponse } from "@/media";
 import { RightOption } from "./RightOption";
 import { LeftContent } from "./LeftContent";
+import { FAQ } from "@/components/FAQ";
+import { Footer } from "@/components/Footer";
 
 function getCurentLangStr(): string | undefined {
   const findLang = langList.find((item) => item?.key == gstate.lang);
@@ -44,6 +46,7 @@ const Header = observer(() => {
             <Typography.Text>{getCurentLangStr()}</Typography.Text>
           </Flex>
         </Dropdown>
+        
         <Typography.Link
           className={style.github}
           target="_blank"
@@ -71,16 +74,19 @@ const Header = observer(() => {
 
 const Body = observer(() => {
   return (
-    <Flex align="stretch" className={style.main}>
-      {homeState.list.size === 0 ? (
-        <UploadCard />
-      ) : (
-        <>
-          <LeftContent />
-          <RightOption />
-        </>
-      )}
-    </Flex>
+    <>
+      <Flex align="stretch" className={style.main}>
+        {homeState.list.size === 0 ? (
+          <UploadCard />
+        ) : (
+          <>
+            <LeftContent />
+            <RightOption />
+          </>
+        )}
+      </Flex>
+      {homeState.list.size === 0 && <FAQ />}
+    </>
   );
 });
 
@@ -92,6 +98,7 @@ const Home = observer(() => {
       <Header />
       <Body />
       {homeState.compareId !== null && <Compare />}
+      <Footer />
     </div>
   );
 });

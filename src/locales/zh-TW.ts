@@ -77,6 +77,84 @@ const localeData: LocaleData = {
     after: "壓縮後",
     rate: "壓縮率",
   },
+  faq: {
+    title: "Small.im 圖片壓縮 FAQ",
+    sections: [
+      {
+        title: "一般問題",
+        items: [
+          {
+            question: "什麼是 Small.im？",
+            answer: "Small.im 是一個支援多種圖片格式的開源批量圖片壓縮工具。它是 PicSmaller (https://github.com/joye61/pic-smaller) 的分支，可在 https://github.com/airyland/pic-smaller 取得，並在 MIT 授權下發布。"
+          },
+          {
+            question: "Small.im 支援哪些圖片格式？",
+            answer: "Small.im 支援各種格式，包括 JPEG、WEBP、PNG、GIF 和 AVIF。"
+          },
+          {
+            question: "使用 Small.im 處理我的圖片安全嗎？",
+            answer: "是的，完全安全。所有圖片壓縮和轉換程序都在您的瀏覽器中本地執行。您的圖片永遠不會上傳到任何伺服器，確保您的資料隱私和安全。"
+          }
+        ]
+      },
+      {
+        title: "使用方法",
+        items: [
+          {
+            question: "如何將圖片上傳到 Small.im？",
+            answer: "您可以透過點擊上傳區域選擇檔案，或將檔案和資料夾拖放到上面來選擇檔案。"
+          },
+          {
+            question: "可以一次添加多張圖片嗎？",
+            answer: "是的，您可以批量添加圖片或一次添加整個資料夾。"
+          },
+          {
+            question: "如何比較原始圖片和壓縮後的圖片？",
+            answer: "使用預覽功能，它允許您拖動分割線來比較原始圖片（左側）和壓縮後的圖片（右側）。"
+          }
+        ]
+      },
+      {
+        title: "壓縮選項",
+        items: [
+          {
+            question: "可以在壓縮時調整圖片大小嗎？",
+            answer: "是的，您可以使用各種模式調整圖片大小：設定寬度（高度自動縮放）、設定高度（寬度自動縮放）、設定短邊（長邊自動縮放）、設定長邊（短邊自動縮放）。"
+          },
+          {
+            question: "對於不同的圖片格式，我可以調整哪些參數？",
+            answer: "您可以調整：JPEG/WEBP：輸出圖片品質（0-1），PNG：輸出顏色數量（2-256）和抖色係數（0-1），GIF：抖色選項，AVIF：輸出圖片品質（1-100）和壓縮速度（1-10）。"
+          }
+        ]
+      },
+      {
+        title: "管理壓縮圖片",
+        items: [
+          {
+            question: "如何下載我的壓縮圖片？",
+            answer: "您可以下載個別圖片或一次儲存所有壓縮圖片。"
+          },
+          {
+            question: "可以從清單中移除圖片嗎？",
+            answer: "是的，您可以移除個別圖片或清除清單中的所有圖片。"
+          }
+        ]
+      },
+      {
+        title: "疑難排解",
+        items: [
+          {
+            question: "遇到 404 錯誤時該怎麼辦？",
+            answer: "如果您看到 404 錯誤，表示您嘗試存取的頁面不存在。使用「返回首頁」選項回到主頁面。"
+          },
+          {
+            question: "如何將壓縮選項重設為預設值？",
+            answer: "使用「重置選項」按鈕將所有壓縮設定恢復為預設值。"
+          }
+        ]
+      }
+    ]
+  },
 };
 
 export default localeData;

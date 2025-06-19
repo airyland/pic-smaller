@@ -74,4 +74,14 @@ export interface LocaleData {
     after: string;
     rate: string;
   };
+  faq: {
+    title: string;
+    sections: Array<{
+      title: string;
+      items: Array<{
+        question: string;
+        answer: string;
+      }>;
+    }>;
+  };
 }

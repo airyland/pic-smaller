@@ -79,6 +79,84 @@ const localeData: LocaleData = {
     after: "Après compression",
     rate: "Taux de diminution",
   },
+  faq: {
+    title: "FAQ de compression d'images Small.im",
+    sections: [
+      {
+        title: "Questions générales",
+        items: [
+          {
+            question: "Qu'est-ce que Small.im ?",
+            answer: "Small.im est un outil de compression d'images par lots open source qui prend en charge plusieurs formats d'image. Il s'agit d'un fork de PicSmaller (https://github.com/joye61/pic-smaller), disponible sur https://github.com/airyland/pic-smaller, et distribué sous licence MIT."
+          },
+          {
+            question: "Quels formats d'image Small.im prend-il en charge ?",
+            answer: "Small.im prend en charge divers formats, notamment JPEG, WEBP, PNG, GIF et AVIF."
+          },
+          {
+            question: "Est-il sûr d'utiliser Small.im avec mes images ?",
+            answer: "Oui, c'est totalement sûr. Tous les processus de compression et de conversion d'images sont effectués localement dans votre navigateur. Vos images ne sont jamais téléchargées sur un serveur, garantissant ainsi la confidentialité et la sécurité de vos données."
+          }
+        ]
+      },
+      {
+        title: "Utilisation",
+        items: [
+          {
+            question: "Comment télécharger des images sur Small.im ?",
+            answer: "Vous pouvez sélectionner des fichiers en cliquant sur la zone de téléchargement ou en faisant glisser et déposer des fichiers et dossiers dessus."
+          },
+          {
+            question: "Puis-je ajouter plusieurs images à la fois ?",
+            answer: "Oui, vous pouvez ajouter des images par lots ou ajouter des dossiers entiers à la fois."
+          },
+          {
+            question: "Comment puis-je comparer les images originales et compressées ?",
+            answer: "Utilisez la fonction de prévisualisation, qui vous permet de faire glisser une ligne de division pour comparer l'image originale (côté gauche) avec l'image compressée (côté droit)."
+          }
+        ]
+      },
+      {
+        title: "Options de compression",
+        items: [
+          {
+            question: "Puis-je redimensionner les images lors de la compression ?",
+            answer: "Oui, vous pouvez redimensionner les images en utilisant différents modes : Définir la largeur (la hauteur s'ajuste automatiquement), Définir la hauteur (la largeur s'ajuste automatiquement), Définir le côté court (le côté long s'ajuste automatiquement), Définir le côté long (le côté court s'ajuste automatiquement)."
+          },
+          {
+            question: "Quels paramètres puis-je ajuster pour différents formats d'image ?",
+            answer: "Vous pouvez ajuster : JPEG/WEBP : Qualité de l'image de sortie (0-1), PNG : Nombre de couleurs de sortie (2-256) et coefficient de tramage (0-1), GIF : Option de tramage, AVIF : Qualité de l'image de sortie (1-100) et vitesse de compression (1-10)."
+          }
+        ]
+      },
+      {
+        title: "Gestion des images compressées",
+        items: [
+          {
+            question: "Comment puis-je télécharger mes images compressées ?",
+            answer: "Vous pouvez télécharger des images individuelles ou enregistrer toutes les images compressées en une seule fois."
+          },
+          {
+            question: "Puis-je supprimer des images de la liste ?",
+            answer: "Oui, vous pouvez supprimer des images individuelles ou effacer toutes les images de la liste."
+          }
+        ]
+      },
+      {
+        title: "Dépannage",
+        items: [
+          {
+            question: "Que dois-je faire si je rencontre une erreur 404 ?",
+            answer: "Si vous voyez une erreur 404, cela signifie que la page que vous essayez d'accéder n'existe pas. Utilisez l'option \"Retour à l'accueil\" pour revenir à la page principale."
+          },
+          {
+            question: "Comment puis-je réinitialiser les options de compression par défaut ?",
+            answer: "Utilisez le bouton \"Réinitialiser les options\" pour restaurer tous les paramètres de compression à leurs valeurs par défaut."
+          }
+        ]
+      }
+    ]
+  },
 };
 
 export default localeData;
