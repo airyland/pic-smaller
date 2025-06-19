@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "vite",
     "dev:ssr": "node server.js",
-    "build": "tsc && vite build && node build-entry-server.js && node build-ssr.js",
+    "build": "tsc && vite build",
+    "build:old": "tsc && vite build && node build-entry-server.js && node build-ssr.js",
     "build:spa": "tsc && vite build",
-    "build:ssr": "npm run build && npm run build:server",
+    "build:ssr": "npm run build:old && npm run build:server",
     "build:server": "vite build --ssr server.js --outDir dist-server",
     "build:preview": "tsc && vite build --mode preview",
     "preview": "vite preview",
-    "serve": "NODE_ENV=production node dist-server/server.js",
+    "serve": "vite preview --port 3019",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write --no-error-on-unmatched-pattern --ignore-unknown src/**/*",
     "test": "vitest run"
